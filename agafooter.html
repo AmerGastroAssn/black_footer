@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css">
+
+body {
+    font-size: 100%;
+    font-family: 'Roboto',"Oswald", sans-serif;
+    font-weight: 400;
+    color: #2c292e;
+}
+
+.btn.orange {
+    color: white;
+    background-color: #f5950c;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+    font-family: "nimbus-sans-condensed","Oswald",sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn {
+    color: white;
+    background-color: #dee0e0;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+    font-family: "nimbus-sans-condensed","Oswald",sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+footer .contact-item {
+    float: left;
+    clear: right;
+    margin: 6px 0;
+}
+
+
+p.title,footer .utility {
+ font-family:"nimbus-sans-condensed","Oswald",sans-serif
+}
+
+footer .title {
+ font-size:35px
+}
+
+footer {
+ text-align:left
+}
+footer .left {
+ float:left;
+ width:48%
+}
+footer .right {
+ float:right;
+ width:48%
+}
+
+#footer_ad {
+ width:100%;
+ clear:both;
+ border-top:1px solid #bee0ef;
+ border-bottom:1px solid #7d9dae;
+ background:transparent url("/assets/bg-footer_ad.jpg") repeat center center;
+ padding:30px 0;
+ text-align:center
+}
+@media screen and (max-width: 768px) {
+ #footer_ad span {
+  display:none
+ }
+ #footer_ad span+span {
+  display:block
+ }
+ #footer_ad .footer_ad_desk {
+  display:none !important
+ }
+ #footer_ad .footer_ad_mob {
+  display:inline-block !important
+ }
+}
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+ #footer_ad span {
+  display:none
+ }
+ #footer_ad span+span {
+  display:block
+ }
+ #footer_ad .footer_ad_desk {
+  display:none !important
+ }
+ #footer_ad .footer_ad_mob {
+  display:inline-block !important
+ }
+}
+@media only screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
+ #footer_ad span {
+  display:none
+ }
+ #footer_ad span+span {
+  display:block
+ }
+ #footer_ad .footer_ad_desk {
+  display:none !important
+ }
+ #footer_ad .footer_ad_mob {
+  display:inline-block !important
+ }
+}
+@media screen and (max-width: 1164px) {
+ #footer_ad span {
+  display:none
+ }
+ #footer_ad span+span {
+  display:block
+ }
+ #footer_ad .footer_ad_desk {
+  display:inline-block
+ }
+ #footer_ad .footer_ad_mob {
+  display:none
+ }
+}
+@media screen and (min-width: 1164px) {
+ #footer_ad span {
+  display:block
+ }
+ #footer_ad span+span {
+  display:none
+ }
+ #footer_ad .footer_ad_desk {
+  display:inline-block
+ }
+ #footer_ad .footer_ad_mob {
+  display:none
+ }
+}
+footer {
+ background-color:#2c292e;
+ color:darkgrey;
+ padding-top:98px;
+ float:left;
+ clear:both;
+ width:100%
+}
+@media screen and (max-width: 768px) {
+ footer {
+  padding-top:2em
+ }
+ footer .left {
+  clear:both;
+  width:100%;
+  padding:0 2em
+ }
+ footer .right {
+  clear:both;
+  width:100%;
+  padding:1em 2em 0
+ }
+}
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+ footer {
+  padding-top:2em
+ }
+ footer .left {
+  clear:both
+ }
+ footer .right {
+  clear:both
+ }
+}
+@media only screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
+ footer {
+  padding-top:2em
+ }
+ footer .left {
+  clear:both
+ }
+ footer .right {
+  clear:both
+ }
+}
+@media screen and (max-width: 480px) {
+ footer {
+  padding-top:2em
+ }
+ footer .left {
+  clear:both
+ }
+ footer .right {
+  clear:both
+ }
+}
+footer .logo {
+ width:86px;
+ height:86px;
+ float:left;
+ margin-right:30px
+}
+footer .contact {
+ border-bottom:1px solid darkgrey;
+ margin-bottom:2em
+}
+footer .contact p+p {
+ margin:0 0 1.5em 0
+}
+footer .contact p+p+p {
+ margin:0 0 3em 0
+}
+footer .title.blue {
+ font-weight:bold;
+ text-transform:uppercase;
+ border-bottom:1px solid #ec961a;
+ margin:20px 0;
+ background:transparent url(http://www.gastro.org/assets/arrow.png) no-repeat right center
+}
+footer .contact-item {
+ float:left;
+ clear:right;
+ margin:6px 0
+}
+@media screen and (max-width: 768px) {
+ footer .contact-item {
+  width:200px
+ }
+}
+footer .phone {
+ background:transparent url(http://www.gastro.org/assets/icon-phone.png) no-repeat center center;
+ width:16px;
+ height:28px;
+ display:inline-block;
+ float:left;
+ margin-right:10px
+}
+footer .pin {
+ background:transparent url(http://www.gastro.org/assets/icon-marker.png) no-repeat center center;
+ width:17px;
+ height:27px;
+ display:inline-block;
+ float:left;
+ margin-right:10px
+}
+footer .social a {
+ display:block;
+ width:66px;
+ height:65px;
+ float:left;
+ clear:none;
+ margin-right:10px
+}
+footer .social a.fb {
+ background:transparent url(http://www.gastro.org/assets/icon-socials.png) no-repeat 0 -65px
+}
+footer .social a.fb:hover {
+ background-position:0 0
+}
+footer .social a.li {
+ background:transparent url(http://www.gastro.org/assets/icon-socials.png) no-repeat -66px -65px
+}
+footer .social a.li:hover {
+ background-position:-66px 0
+}
+footer .social a.yt {
+ background:transparent url(http://www.gastro.org/assets/icon-socials.png) no-repeat -132px -65px
+}
+footer .social a.yt:hover {
+ background-position:-132px 0
+}
+footer .social a.tw {
+ background:transparent url(http://www.gastro.org/assets/icon-socials.png) no-repeat -198px -65px
+}
+footer .social a.tw:hover {
+ background-position:-198px 0
+}
+footer .social a.ds {
+ background:transparent url(http://www.gastro.org/assets/icon-socials.png) no-repeat -264px -65px
+}
+footer .social a.ds:hover {
+ background-position:-264px 0
+}
+footer .utility {
+ float:left;
+ clear:both;
+ width:100%;
+ background-color:#1e1c20;
+ padding:28px 0;
+ margin-top:98px
+}
+@media screen and (max-width: 768px) {
+ footer .utility {
+  margin-top:2em;
+  text-align:center
+ }
+ footer .utility span {
+  float:none;
+  clear:both;
+  display:inline-block
+ }
+}
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+ footer .utility {
+  margin-top:2em;
+  text-align:center
+ }
+ footer .utility span {
+  float:none;
+  clear:both;
+  display:inline-block
+ }
+}
+@media only screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
+ footer .utility {
+  margin-top:2em;
+  text-align:center
+ }
+ footer .utility span {
+  float:none;
+  clear:both;
+  display:inline-block
+ }
+}
+footer .twitter-container {
+ background-color:#221f24;
+ margin-top:1em;
+ border-radius:10px;
+ float:left;
+ clear:both;
+ width:100%;
+ display:block;
+ padding:1em;
+ color:#cdcbcf;
+ font-family:"nimbus-sans-condensed","Oswald",sans-serif
+}
+footer .twitter-container p,footer .twitter-container li,footer .twitter-container a {
+ font-family:"nimbus-sans-condensed","Oswald",sans-serif
+}
+footer .twitter-container h3 {
+ font-family:"nimbus-sans-condensed","Oswald",sans-serif;
+ background:transparent url(http://www.gastro.org/assets/footer-icon-twitter.png) no-repeat left center;
+ padding-left:2em;
+ font-weight:700
+}
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+ footer .twitter-container {
+  display:none
+ }
+}
+@media only screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
+ footer .twitter-container {
+  display:none
+ }
+}
+@media screen and (max-width: 768px) {
+ footer .twitter-container {
+  display:none
+ }
+}
+</style>
+</head>
+
+<body>
+<footer>
+  <div class="center_container">
+  <div class="left">
+    <div class="contact">
+      <p class="title">Overwhelmed by Email?</p>
+      <p>Tell us your interests and we’ll adjust what you receive from us. It takes two minutes to take control over your newsletter content, emails and website preferences.</p>
+      <p class="text-right"><a href="http://aga.highroadsolution.com/search.aspx" class="btn orange">Customize</a></p>
+    </div>
+    <div>
+      <img src="http://www.gastro.org/assets/logo_svg.svg" class="logo">
+      <div class="contact-item"><div class="phone"></div><!--a href="tel:3016542055"-->301-654-2055<!--/a--></div><br/><br/><br/>
+      <div class="contact-item"><div class="pin"></div><!--a href="https://www.google.com/maps/place/American+Gastroenterological+Association/@38.988853,-77.099509,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7c963b339df57:0x1052955d2cec0b7b"-->4930 Del Ray Avenue, Bethesda, MD 20814<!--/a--></div>
+    </div>
+  </div>
+  <div class="right">
+    <p class="title">Stay Connected</p>
+    <div class="social">
+      <a class="fb" href="https://www.facebook.com/AmerGastroAssn"></a>
+      <a class="li" href="https://www.linkedin.com/groups?home=&amp;gid=915257"></a>
+      <a class="yt" href="https://www.youtube.com/user/AmerGastroAssn"></a>
+      <a class="tw" href="https://twitter.com/AmerGastroAssn"></a>
+      <a class="ds" href="http://community.gastro.org"></a>
+    </div>
+  </div>
+  </div>
+  <div class="utility">
+    <div class="center_container">
+    <span class="fleft"><a href="/privacy-policy">Privacy Policy</a></span>
+    <span class="fright">© 2017 American Gastroenterological Association</span>
+  </div>
+    </div>
+  
+</footer>
+</body>
+</html>
