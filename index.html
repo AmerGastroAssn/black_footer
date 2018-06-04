@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <!-- Bootstrap & FontAwesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <script src="https://use.fontawesome.com/f403a1a535.js"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+ <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+ <![endif]-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <!--~ For Bootstrap ~-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <style type="text/css">
+            body {
+                background-color: #f2f6f8;
+                font-family: AvenirLTStd-Book, Helvetica, sans-serif;
+            }
+
+            a:link {
+                color: #64b9e1;
+            }
+
+            a.makeAnotherApplication {
+                color: #64b9e1;
+                text-decoration: underline;
+            }
+
+            a.dropdown-item {
+                color: #64b9e1;
+            }
+
+            .container.top-nav {
+                background: #1f385a !important;
+                padding: 0;
+            }
+
+            nav#family-dropdown {
+                padding: 0 16px;
+            }
+
+            #family-dropdown {
+                background-color: #fff;
+            }
+
+            #family-dropdown>ul>li {
+                margin: 1em;
+            }
+
+            #family-dropdown>ul>li>a {
+                color: #83A7BF;
+            }
+
+            a:link#close {
+                color: #fff;
+                background-color: #83a7bf;
+                padding: 3px 5px;
+            }
+
+            .tab-pane {
+                color: #004D7E;
+            }
+
+            .blue-overlay {
+                opacity: 0.3;
+                background-color: rgb(37, 66, 106);
+                z-index: 5000;
+                width: 100%;
+                cursor: pointer;
+            }
+
+            .regular {
+                opacity: initial;
+                background-color: initial;
+                z-index: 0;
+                width: initial;
+                cursor: initial;
+            }
+
+            .container.subnav {
+                background-color: #fff !important;
+            }
+
+            #content {
+                background-color: #fff;
+                padding: 0 1em 0 1em;
+            }
+
+            .dropdown {
+                padding: 1em;
+                vertical-align: middle;
+            }
+
+            a.nav-link.subnav {
+                color: #122133 !important;
+                font-weight: 900;
+                padding-top: 1em;
+                font-size: 1.2em;
+                line-height: 1.5em;
+            }
+
+            a.dropdown-item {
+                padding: 2em 3em;
+            }
+
+            a:hover.dropdown-item {
+                background-color: rgb(201, 237, 254);
+            }
+
+            .dropdown-divider {
+                margin: 0;
+                border-top: 1px solid rgb(201, 237, 254);
+            }
+
+            .navbar.navbar-dark {
+                padding: 0;
+            }
+
+            .nav-item.dropdown.top-bar {
+                padding: 0;
+            }
+
+            .dropdown-menu.show {
+                border-radius: 0;
+                padding: 0;
+                border: transparent;
+                z-index: 5000;
+                box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            }
+
+            a.nav-link.dropdown-toggle.family {
+                color: #fff !important;
+                padding-top: 1em;
+                cursor: pointer;
+            }
+
+            .tab-content {
+                background-color: #F0F5F7;
+            }
+
+            nav.navbar.navbar-expand-lg.navbar-light.bg-white {
+                padding: 0 16px;
+            }
+
+            .navbar {
+                border-bottom: solid 1px lightgray;
+            }
+
+
+            .dropdown-toggle::after {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 0;
+                vertical-align: .255em;
+                content: "";
+                border-top: .3em solid;
+                border-right: .3em solid transparent;
+                border-bottom: 0;
+                border-left: .3em solid transparent;
+                color: #64b9e1;
+            }
+
+            a.btn-primary {
+                background-color: #1f385a;
+                color: #fff;
+                border: 0;
+                border-radius: 0;
+            }
+
+            a.btn-primary:hover {
+                background-color: #0085CF;
+                color: #fff;
+            }
+        </style>
+
+
+
+
+
+        <!--~ Navbar ~-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#1f385a; font-weight:bold; color:#f2f6f8!important;">
+            <div class="container top-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown top-bar">
+                        <a class="nav-link dropdown-toggle family">
+                            AGA Family of Websites: Gastro.org
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- Nav tabs -->
+
+
+        <div class="tab-dropdown">
+            <nav class="navbar navbar-expand-md navbar-light" id="family-dropdown">
+                <ul class="nav navbar-nav mx-auto mx-autonav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#journals">AGA Journals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#university">AGA University</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#foundation">AGA Research Foundation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#community">AGA Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#partners">Industry Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#close" id="close">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active p-5" id="journals">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3 text-center">
+                            <img src="https://aga-cms-assets.s3.amazonaws.com/20182115431---AGAJournalsIcon_020118_2503Artboard%201.png" alt="aga journals"
+                                class="img-responsive" style="max-width:80px;">
+                            <h5 class="pt-3">
+                                AGA Journals
+                            </h5>
+                        </div>
+                        <div class="col-sm-5">
+                            <p>AGA’s peer-reviewed journals offer high-quality research on current advances in GI and hepatology.
+                                Access the latest research from Gastroenterology, Clinical Gastroenterology and Hepatology,
+                                and Cellular and Molecular Gastroenterology and Hepatology.</p>
+                            <p>
+                                <a class="btn btn-primary" href="http://www.agajournals.org/">Visit Site&nbsp;
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade p-5" id="university">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3 text-center">
+                            <img src="https://aga-cms-assets.s3.amazonaws.com/201821154340---AGAUniversityIcon_020118_2503Artboard%201.png" alt="aga journals"
+                                class="img-responsive" style="max-width:80px;">
+                            <h5 class="pt-3">
+                                AGA University
+                            </h5>
+                        </div>
+                        <div class="col-sm-5">
+                            <p>AGA University is your home for in-person meetings, webinars and other educational tools designed
+                                to help you stay current with advances in the GI field and earn MOC/CME.</p>
+                            <p>
+                                <a class="btn btn-primary" href="http://agau.gastro.org/diweb/start">Visit Site&nbsp;
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade p-5" id="foundation">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3 text-center">
+                            <img src="https://aga-cms-assets.s3.amazonaws.com/201821154544---AGAResearchFoundationIcon_020118_2503Artboard%201.png" alt="aga journals"
+                                class="img-responsive" style="max-width:80px;">
+                            <h5 class="pt-3">
+                                AGA Research Foundation
+                            </h5>
+                        </div>
+                        <div class="col-sm-5">
+                            <p>The AGA Research Foundation funds young investigators who are committed to advancing gastroenterology.
+                                Through research, we can identify new treatment options for digestive disease patients.</p>
+                            <p>
+                                <a class="btn btn-primary" href="https://www.gastro.org/foundation">Visit Site&nbsp;
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade p-5" id="community">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3 text-center">
+                            <img src="https://aga-cms-assets.s3.amazonaws.com/20182115331---AGACommunityIcon_020118_2503Artboard%201.png" alt="aga journals"
+                                class="img-responsive" style="max-width:80px;">
+                            <h5 class="pt-3">
+                                AGA Community
+                            </h5>
+                        </div>
+                        <div class="col-sm-5">
+                            <p>AGA Community is your hub for connecting with your fellow GI professionals in a private, member-only
+                                discussion forum.</p>
+                            <p>
+                                <a class="btn btn-primary" href="https://community.gastro.org/home">Visit Site&nbsp;
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade p-5" id="partners">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3 text-center">
+                            <img src="https://aga-cms-assets.s3.amazonaws.com/201821154451---IndustryPartnersIcon_020118_2503Artboard%201.png" alt="aga journals"
+                                class="img-responsive" style="max-width:80px;">
+                            <h5 class="pt-3">
+                                Industry Partners
+                            </h5>
+                        </div>
+                        <div class="col-sm-5">
+                            <p>Industry: learn more about AGA and how to partner with us on shared objectives.</p>
+                            <p>
+                                <a class="btn btn-primary" href="http://partner.gastro.org/">Visit Site&nbsp;
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+
+                </div>
+                <div class="tab-pane container fade p-5" id="close">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3 text-center">
+                            <img src="https://aga-cms-assets.s3.amazonaws.com/20182115431---AGAJournalsIcon_020118_2503Artboard%201.png" alt="aga journals"
+                                class="img-responsive" style="max-width:80px;">
+                            <h5 class="pt-3">
+                                Industry Partners
+                            </h5>
+                        </div>
+                        <div class="col-sm-5">
+                            <p>AGA’s peer-reviewed journals offer high-quality research on current advances in GI and hepatology.
+                                Access the latest research from Gastroenterology, Clinical Gastroenterology and Hepatology,
+                                and Cellular and Molecular Gastroenterology and Hepatology.</p>
+                            <p>
+                                <a class="btn btn-primary">Visit Site&nbsp;
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!--~ Sub-navbar ~-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white mb-5">
+            <div class="container subnav">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a href="https://gastro.org" class="navbar-brand" style="vertical-align:middle; padding-top:40px;">
+                                <img src="https://s3.amazonaws.com/aga-files/images/logo.svg" width="300" alt="aga logo">
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle subnav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Guidelines
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Colorectal Cancer</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Esophangeal &amp; Gastric Disorders</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Liver Diseases</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">IBD &amp; Bowel Disorders</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Pancreatic Disorders</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">All Guidelines</a>
+
+                            </div>
+                        </li>
+                        <!--~ Dropdown 2 ~-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle subnav" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Journals &amp; Publications
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="#">Gastroenterology</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Clinical Gastroenterology and Hepatology (CGH)</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Journals Blog</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">GI &amp; Hepatology News</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">The New Gastroenerologist</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">AGA Perspectives</a>
+                            </div>
+                        </li>
+
+                        <!--~ Dropdown 3 ~-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle subnav" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Meetings &amp; Learning
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <a class="dropdown-item" href="#">AGA University</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Meetings &amp; Courses</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Digestive Disease Week</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Maintenance of Certification</a>
+                            </div>
+                        </li>
+
+                        <!--~ Dropdown 4 ~-->
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle subnav" href="#" role="button">
+                                News
+                            </a>
+                        </li> -->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link subnav" href="#">News</a>
+                        </li>
+
+                        <!--~ Dropdown 5 ~-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle subnav" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Membership
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                                <a class="dropdown-item" href="#">Join AGA</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Renew Membership</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Benefits</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Membership Directory</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Discussions</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Recognition Awards</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Initatives &amp; Programs</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">AGA PAC</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+        <script type="text/javascript">
+            $(document).ready(() => {
+                // Tabs                
+                $('.tab-dropdown').hide();
+                $('#family-dropdown').hide();
+                $('li.nav-item.dropdown.top-bar, #close').click(() => {
+                    $('.tab-dropdown').slideToggle(300);
+                    $('#family-dropdown').slideToggle(300);
+                });
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
