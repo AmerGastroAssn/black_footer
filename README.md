@@ -1,6 +1,6 @@
-# black_footer
+# AGA Footers
 
-General AGA footer template used on most micro-sites
+This repo has AGA's old black and new Blue footers.
 
 
 
